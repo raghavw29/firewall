@@ -1,5 +1,5 @@
 Direction,Protocol,Port,IP
-outbound,tcp,82,12.123.12.23
+outbound,tcp,82,122.123.123.123
 inbound,udp,12,12.43.24.56
 outbound,tcp,45-782,1.1.2.3
 inbound,udp,699-1281,127.1.1.0-128.4.3.2

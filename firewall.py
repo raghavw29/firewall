@@ -63,8 +63,9 @@ class firewall:
 
 if __name__ == '__main__':
     f1 = firewall('rules.csv')
-    f1.accept("outbound", "128.123.12.23", 82, 'tcp') # test for firewall rejection
-    f1.accept("inbound","34.22.44.22",21,'udp')
+    f1.accept("outbound", "122.123.123.123", 82, 'tcp') # test for accept large value for ip
+    f1.accept("outbound", "121.153.323.923", 82, 'tcp') # test for reject- does not match rules
+    f1.accept("inbound","34.22.44.22",21,'udp')# test for reject- does not match rules
     f1.accept("outbound","1.1.2.3",45,'tcp')# test for accept - range in port no range in ip (port min)
     f1.accept("outbound","1.1.2.3",400,'tcp')# test for accept - range in port no range in ip (middle value)
     f1.accept("outbound","1.1.2.3",782,'tcp')# test for accept - range in port no range in ip (port max)
